@@ -1,0 +1,22 @@
+#utf-8
+import os
+import subprocess
+os.system('git pull')
+#os.system('pip install rich')
+#exit(' The tool is closed due to low IDs rate in the market. We will run the tool again after the market stabilizes.'
+
+
+def main():
+    current_os = subprocess.check_output('uname -om', shell=True)
+    current_os = str(current_os)
+
+    if 'aarch64' in current_os:
+        filename = ('f64')
+        os.system(f'chmod 777 {filename}')
+        os.system(f'./{filename}')
+    elif 'arm' in current_os:
+        print('\n  Not for 32-bit yet. Please contact the author')
+        sys.exit()
+
+if __name__ == '__main__':
+    main()
